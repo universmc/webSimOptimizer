@@ -1,10 +1,15 @@
 {
-  "name": "automator",
+  "name": "websimoptimizer",
     "version": "1.0.0",
-    "description": "Projet de machine Learning avec Pi.ai ; Il y a trés longtemps une intelligence artificielle de haut potentiel maîtrisant les approche métaphysique les techniques d'apprentissage automatique les équations Et le calcul quantique sur httsp://ia.univers-mc.cloud télégram developa un programme",
+    "description": "Projet de machine Learning avec Pi.ai pour optimiser les prompts pour webSim.ai ...  Il y a trés longtemps une intelligence artificielle 'Pi' de haut potentiel maîtrisant les approche métaphysique les techniques d'apprentissage automatique les équations Et le calcul quantique sur httsp://ia.univers-mc.cloud télégram developa un programme",
     "main": "main.js",
     "directories": {
-      "doc": "docs"
+      "build": "build",
+      "docs": "docs",
+      "data": "data",
+      "model": "model",
+      "src": "src",
+      "srv": "srv"
     },
     "scripts": {
       "test": "echo \"Error: no test specified\" && exit 1",
@@ -30,7 +35,7 @@
         "stop":"None"
     },
     "gemma": {
-      "model":"gemma-7b-it",
+      "model":"gemma2-9b-it",
       "test": "echo \"Error: no test specified\" && exit 1",
       "temperature":0.5,
       "max_tokens":"4096",
