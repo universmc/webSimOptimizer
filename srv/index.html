@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Script JavaScript dans le navigateur</title>
+</head>
+<body>
+<h1>Résultats du script JavaScript</h1>
+<div id="resultat"></div>
+<script>
+        // Créez une requête AJAX pour appeler le serveur Node.js
+        const req = new XMLHttpRequest();
+        req.open('GET', '/groq', true);
+
+        req.onload = () => {
+          const status = req.status;
+          if (status === 200) {
+            // Mettez à jour le contenu de l'élément HTML avec la réponse
+            const resultatDiv = document.getElementById('resultat');
+            const response = JSON.parse(req.responseText);
+            resultatDiv.innerText = response.choices[0].message.content;
+          } else if (status === 500) {
+            console.error('Une erreur est survenue');
+          }
+        };
+
+        req.send();
+    </script>
+</body>
+</html>
