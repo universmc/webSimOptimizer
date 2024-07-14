@@ -38,7 +38,7 @@ MAGIC_TARGETS := codex build rep file script clean
 update:
 	@echo "✨ Mise à jour de l'application sur le répertoire GitHub ✨"
 	@git add .
-	@git commit -m "test"
+	@git commit -m "update"
 	@git push
 
 all: $(MAGIC_TARGETS)
